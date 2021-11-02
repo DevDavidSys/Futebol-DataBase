@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    overflow-x: hidden;
+}
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@500&display=swap');
+.all{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar{
+    width: 50px;
+    height: 100%;
+    border: 1px solid darkslategray;
+    background-color: darkslategray;    
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-decoration: none;
+    text-decoration-style: none;
+    padding: 5px;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    color: white;
+    z-index: 1000;
+    border-right: 2px solid white;
+}
+
+.sidebar ul{
+    width: 100%;
+    text-decoration-style: none;
+    text-align: center;
+    font-weight: bold;
+    text-align: center;
+
+}
+.sidebar ul li{
+    text-decoration: none;
+    border-top: 1px solid white;
+    display: flex;
+    margin: 10px 0px;
+    justify-content: center;
+    align-content: center;
+    padding: 5px;
+}
+
+.icon-hover{
+    position: absolute;
+    background-color: darkslategray;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    top: 50%;
+    right: -25px;
+    z-index: 1001;
+    border: 2px solid;
+    
+}
+
+.icon-hover img{
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    z-index: 1002;
+}
+.hide{
+    display: none;
+}
+.container{
+    position:absolute;
+    background-image: url(./Assets/pexels-kampus-production-8941576.jpg);
+    left: 50px;
+    width: 100%;
+    display: flex;
+    width: calc(100%-50px);
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    overflow: hidden;
+    z-index: 0;
+
+    
+}
