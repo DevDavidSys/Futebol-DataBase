@@ -1,6 +1,6 @@
 function Onload(){
     let sidebar = document.getElementById('sidebar');
-    sidebar.addEventListener('mouseover',slide_open_sidebar);
+    sidebar.addEventListener('click',slide_open_sidebar);
 
 
 }
@@ -15,7 +15,7 @@ function slide_open_sidebar(){
     let icon = document.getElementById('sidebar_icon');
     
 
-    sidebar.removeEventListener('mouseover',slide_open_sidebar);
+    sidebar.removeEventListener('click',slide_open_sidebar);
     var slide = setInterval(()=>{
         Rotate++;
         if(sidebar.clientWidth < 200){
@@ -26,7 +26,7 @@ function slide_open_sidebar(){
         }
         else{
             clearInterval(slide);
-            sidebar.addEventListener('mouseout',slide_close_sidebar)
+            sidebar.addEventListener('click',slide_close_sidebar)
             document.getElementById('list_sidebar').classList.remove('hide');
         
         }
@@ -41,7 +41,7 @@ function slide_close_sidebar(){
     let Rotate = 0;
     let icon = document.getElementById('sidebar_icon');
 
-    sidebar.removeEventListener('mouseout',slide_close_sidebar);
+    sidebar.removeEventListener('click',slide_close_sidebar);
 
     var slide = setInterval(()=>{
         if( sidebar.clientWidth> 50){
@@ -50,9 +50,10 @@ function slide_close_sidebar(){
             icon.style.transform = `Rotate(${Rotate--}deg)`;
         }
         else{
-            clearInterval(slide);
-            sidebar.addEventListener('mouseover',slide_open_sidebar);
+            
             document.getElementById('list_sidebar').classList.add('hide');
+            clearInterval(slide);
+            sidebar.addEventListener('click',slide_open_sidebar);
         }
 
     },10);
