@@ -17,5 +17,6 @@
 </p>
 
 Portanto o resultado final foi esse:
-
-<img src="../GIF/Animacao.gif" />
+<h1 align="center"> 
+    <img src="../GIF/Animacao.gif" />
+</h1>
