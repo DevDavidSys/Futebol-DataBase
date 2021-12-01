@@ -2,7 +2,7 @@
     Futebol-DataBase
 </h1>
 
-<p>Utilizando deste banco de dados, o objetivo do projeto foi criar uma interface simples, que mostrasse de forma mais legível que um banco de dados, as consultas que um usuário poderia fazer, como verificar o histório do seu time do coração contra um adversário específico </p>
+<p>Utilizando deste banco de dados, o objetivo do projeto foi criar uma interface simples, que mostrasse de forma mais legível que um banco de dados, as consultas que um usuário poderia fazer, como verificar o histórico do seu time do coração contra um adversário específico </p>
 <p>A base de dados pode ser encontrada aqui:</p>
 <h2>https://www.kaggle.com/adaoduque/campeonato-brasileiro-de-futebol</h2>
 <p>*Este banco de dados conta com mais de 8000 registros de jogos desde do ano 2000*</p>
@@ -18,4 +18,4 @@
 
 Portanto o resultado final foi esse:
 
-<img src="./GIF/Animação.gif"/>
+<img src="../GIF/Animacao.gif" />
