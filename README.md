@@ -18,5 +18,5 @@
 
 Portanto o resultado final foi esse:
 <h1 align="center"> 
-    <img src="../GIF/Animacao.gif" />
+    <img src="./GIF/Animacao.gif" />
 </h1>
