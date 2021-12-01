@@ -1,24 +1,51 @@
-<?php
-    function QueryTeams(){
-        $servername = '127.0.0.1';
-        $username = 'client';
-        $password = '';
-        $dbname = 'futebol';
+<?php include('inicial.php');?>
 
-        $conn = new mysqli($servername,$username,$password,$dbname);
-        if($conn->connect_error){
-                die('Server Connect Error');
-        }
-        else{
-        }
 
-        $result = $conn->query('SELECT Mandante,Visitante,`Mandante Placar`,`Visitante Placar` FROM campeonato_brasileiro_full WHERE Mandante LIKE "Flamengo" OR Visitante LIKE "Flamengo" ORDER BY Mandante ASC');
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Futebol</title>
+        <style>
+            <?php include('style.css'); ?>
+        </style>
+    </head>
+    <body>
         
-        if($result->num_rows > 0){
-            while($row = $result->fetch_assoc()) {
-                echo $row['Mandante']." x ".$row['Visitante'].' -> '.$row['Mandante Placar']."-".$row['Visitante Placar']."<br>";
-            }
-        }
-    }
-    QueryTeams();
-?>
+        <div class="sidebar" id="sidebar">
+            <div class="icon-hover">
+                <img id="sidebar_icon" src="./Assets/soccer-ball-variant.png">
+            </div>
+            <ul id="list_sidebar" class="hide">
+                <li>Pesquisar Jogo</li>
+                <li>Contato</li>
+            </ul>   
+        </div>
+        
+        <div class="container">
+            <form method="POST" action="table.PHP">
+                <input type="text" placeholder="Time 1" list="times" name="team1">
+                <input type="text" placeholder="Time 2" list="times" name="team2">
+                <input type="submit" value="Enviar">
+            </form>
+            
+            <datalist id="times">
+                <?php
+                    $result = $conn->query('SELECT DISTINCT Mandante FROM campeonato_brasileiro_full ORDER BY Mandante ASC');
+                    if($result->num_rows > 0){
+                        
+                        while($row = $result->fetch_assoc()) {
+                            echo "<option value='".$row['Mandante']."'>".$row['Mandante']."</option>";
+                        
+                        }
+                    }
+                ?>
+            </datalist>
+        </div>
+    
+        
+    </body>
+    <script src="script.js">
+    </script>
+
+
+</html>
